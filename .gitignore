@@ -1,0 +1,24 @@
+cat > .gitignore << 'EOL'
+# Dependencies
+node_modules/
+venv/
+env/
+
+# Environment variables
+.env
+*.env
+
+# Build outputs
+__pycache__/
+*.pyc
+.next/
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+EOL
