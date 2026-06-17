@@ -58,12 +58,10 @@ export default function Home() {
         {/* Left Sidebar: Inputs */}
         <div className="col-span-3">
           {/* Modified InputDashboard to pass back raw inputs for PDF */}
-          <InputDashboard onSchemeGenerated={(data: any) => {
+        <InputDashboard onSchemeGenerated={(data: any) => {
             setSchemeData(data);
-            // We need to intercept the raw input data for the PDF. 
-            // Assuming generateScheme API returns the original inputs or we reconstruct them.
-            // For this sprint, we'll update InputDashboard to pass the full payload.
-          }} />
+            setProjectMetadata(data); // Passes the entire payload to PDF generator
+        }} />
         </div>
 
         {/* Right Area: PFD & Equipment List */}
